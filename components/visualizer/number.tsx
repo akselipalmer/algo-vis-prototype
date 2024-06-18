@@ -1,8 +1,12 @@
+"use client";
+import { motion } from "framer-motion";
+
 export type color = "pink" | "blue" | "green" | "yellow";
 
 type NumberProps = {
   value: number;
   color: color;
+  position: number;
 };
 
 const colors = {
@@ -12,12 +16,17 @@ const colors = {
   yellow: "border-yellow-500",
 };
 
-export default function Number({ value, color }: NumberProps): JSX.Element {
+export default function Number({
+  value,
+  color,
+  position = 0,
+}: NumberProps): JSX.Element {
   return (
-    <div
-      className={`border-3 rounded-full h-10 w-10 flex justify-center items-center ${colors[color]}`}
+    <motion.div
+      animate={{ x: position }}
+      className={`border-3 rounded-full h-10 w-10 flex justify-center items-center ${colors[color]} absolute`}
     >
       <p>{value}</p>
-    </div>
+    </motion.div>
   );
 }
