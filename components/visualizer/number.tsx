@@ -23,7 +23,7 @@ export default function Number({
 }: NumberProps): JSX.Element {
   return (
     <motion.div
-      animate={{ x: position }}
+      animate={{ x: position - 250 }}
       className={`border-3 rounded-full h-10 w-10 flex justify-center items-center ${colors[color]} absolute`}
     >
       <p>{value}</p>
