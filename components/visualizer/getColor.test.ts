@@ -13,10 +13,18 @@ test("6 should return green", () => {
   expect(getColor(6)).toBe("green");
 });
 
+test("12 should return green", () => {
+  expect(getColor(12)).toBe("green");
+});
+
 test("5 should return yellow", () => {
   expect(getColor(5)).toBe("yellow");
 });
 
 test("10 should return yellow", () => {
   expect(getColor(10)).toBe("yellow");
+});
+
+test("17 should return blue", () => {
+  expect(getColor(17)).toBe("blue");
 });
