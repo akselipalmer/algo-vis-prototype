@@ -2,13 +2,20 @@ import { Button } from "@nextui-org/button";
 
 import algorithm from "../visualizer/algorithm";
 
+import { settings } from "@/app/page";
+
 type StartStopProps = {
   numbers: number[];
   setNumbers: React.Dispatch<React.SetStateAction<number[]>>;
+  settings: settings;
 };
-export default function StartStop({ numbers, setNumbers }: StartStopProps) {
+export default function StartStop({
+  numbers,
+  setNumbers,
+  settings,
+}: StartStopProps) {
   const runAlgorithm = async () => {
-    algorithm(numbers, setNumbers);
+    algorithm(numbers, setNumbers, settings.speed);
   };
   const handleReset = () => {
     setNumbers([5, 3, 9, 4, 1, 7, 2, 6, 8, 10]);

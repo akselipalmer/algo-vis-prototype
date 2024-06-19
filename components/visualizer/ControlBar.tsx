@@ -21,7 +21,11 @@ export default function ControlBar({
     <div className="border-2 border-gray-200 rounded-lg md:rounded-full px-5 py-2 sm:py-1 max-w-6xl w-full flex sm:items-center  gap-3 flex-wrap">
       <NumberCountSlider setSettings={setSettings} settings={settings} />
       <SpeedSelect setSettings={setSettings} settings={settings} />
-      <StartStop numbers={numbers} setNumbers={setNumbers} />
+      <StartStop
+        numbers={numbers}
+        setNumbers={setNumbers}
+        settings={settings}
+      />
     </div>
   );
 }

@@ -2,13 +2,14 @@ import delay from "./delay";
 
 export default async function algorithm(
   numbers: number[],
-  setNumbers: React.Dispatch<React.SetStateAction<number[]>>
+  setNumbers: React.Dispatch<React.SetStateAction<number[]>>,
+  speed: string
 ) {
   // Bubble sort
   for (let i = 0; i < numbers.length; i++) {
-    await delay(800);
+    await delay(speed);
     for (let j = 0; j < numbers.length - i - 1; j++) {
-      await delay(500);
+      await delay(speed);
       if (numbers[j] > numbers[j + 1]) {
         const temp = numbers[j];
 
