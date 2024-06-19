@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
 
 import getColor from "./getColor";
 import Number from "./number";
-import algorithm from "./algorithm";
 import ControlBar from "./ControlBar";
 
 export default function Visualizer() {
