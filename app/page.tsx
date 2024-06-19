@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 
 import ControlBar from "@/components/visualizer/ControlBar";
 import Visualizer from "@/components/visualizer/visualizer";
-import { speedOptions } from "@/components/animationControls/SpeedSelect";
 import getRandomNumbers from "@/components/visualizer/getRandomNumbers";
 
 export type settings = {
-  speed: speedOptions;
+  speed: string;
   count: number;
 };
 
@@ -17,7 +16,7 @@ export default function Home() {
     speed: "Normal",
     count: 10,
   });
-  const [numbers, setNumbers] = useState(getRandomNumbers(settings.count));
+  const [numbers, setNumbers] = useState<number[]>([]);
 
   useEffect(() => {
     setNumbers(getRandomNumbers(settings.count));
