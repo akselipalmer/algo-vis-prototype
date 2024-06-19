@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import getColor from "./getColor";
 import Number from "./number";
 import algorithm from "./algorithm";
-import ControlBar from "../animationControls/ControlBar";
+import ControlBar from "./ControlBar";
 
 export default function Visualizer() {
   const [numbers, setNumbers] = useState([5, 3, 9, 4, 1, 7, 2, 6, 8, 10]);
