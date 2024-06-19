@@ -6,7 +6,6 @@ export type color = "pink" | "blue" | "green" | "yellow";
 type NumberProps = {
   value: number;
   color: color;
-  position: number;
 };
 
 const colors = {
@@ -16,15 +15,11 @@ const colors = {
   yellow: "border-yellow-500",
 };
 
-export default function Number({
-  value,
-  color,
-  position = 0,
-}: NumberProps): JSX.Element {
+export default function Number({ value, color }: NumberProps): JSX.Element {
   return (
     <motion.div
-      animate={{ x: position - 250 }}
-      className={`border-3 rounded-full h-10 w-10 flex justify-center items-center ${colors[color]} absolute`}
+      layout
+      className={`border-3 rounded-full h-10 w-10 flex justify-center items-center ${colors[color]}`}
     >
       <p>{value}</p>
     </motion.div>
