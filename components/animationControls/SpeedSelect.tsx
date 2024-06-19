@@ -1,6 +1,6 @@
 import { Select, SelectItem } from "@nextui-org/select";
-
-const options = ["slow", "medium", "fast"];
+export type speedOptions = "Slow" | "Normal" | "Fast";
+const options: speedOptions[] = ["Slow", "Normal", "Fast"];
 
 export default function SpeedSelect(): JSX.Element {
   return (
