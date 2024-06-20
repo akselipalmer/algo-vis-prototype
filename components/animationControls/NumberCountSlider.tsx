@@ -1,6 +1,6 @@
 import { Slider } from "@nextui-org/slider";
 
-import { settings } from "@/app/page";
+import { settings } from "@/app/visualizer/page";
 
 type NumberCountSliderProps = {
   setSettings: React.Dispatch<React.SetStateAction<settings>>;
