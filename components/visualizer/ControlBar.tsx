@@ -2,7 +2,7 @@ import StartStop from "../animationControls/StartStop";
 import NumberCountSlider from "../animationControls/NumberCountSlider";
 import SpeedSelect from "../animationControls/SpeedSelect";
 
-import { settings } from "@/app/page";
+import { settings } from "@/app/visualizer/page";
 
 type ControlBarProps = {
   numbers: number[];

@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/button";
 
 import algorithm from "../visualizer/algorithm";
 
-import { settings } from "@/app/page";
+import { settings } from "@/app/visualizer/page";
 
 type StartStopProps = {
   numbers: number[];
