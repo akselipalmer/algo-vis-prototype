@@ -3,7 +3,8 @@
 import { Select, SelectItem } from "@nextui-org/select";
 import { ChangeEvent } from "react";
 
-import { settings } from "@/app/page";
+import { settings } from "@/app/visualizer/page";
+
 export type speedOptions = "Slow" | "Normal" | "Fast";
 const options: speedOptions[] = ["Slow", "Normal", "Fast"];
 
